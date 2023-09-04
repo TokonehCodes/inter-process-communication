@@ -1,5 +1,4 @@
 /*
- * Replace the following string of 0s with your student number
  * 200300469
  */
 #include <stdio.h>
@@ -66,11 +65,6 @@ int joblog_init(proc_t* proc) {
 
 /* 
  * TODO: you must implement this function.
- * Hints:
- * - you have to go to the beginning of the line represented
- *      by entry_num to read the required entry
- * - see malloc and calloc system library functions for dynamic allocation, 
- *      and the documentation in joblog.h for when to do dynamic allocation
  */
 char* joblog_read_entry(proc_t* proc, int entry_num, char* buf) {
 	if(proc == NULL){
@@ -120,9 +114,6 @@ char* joblog_read_entry(proc_t* proc, int entry_num, char* buf) {
 
 /* 
  * TODO: you must implement this function.
- * Hints:
- * - look at the documentation of the format of a log entry in joblog.h
- * - remember new entries are appended to a log file
  */
 void joblog_write_entry(proc_t* proc, job_t* job) {
 	if(proc == NULL){
