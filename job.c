@@ -16,9 +16,6 @@ job_t* job_new(pid_t pid, unsigned int id, const char* label) {
 
 /* 
  * TODO: you must implement this function
- * Hint:
- * - look for other functions in this file that you can use to implement 
- *      this function
  */
 job_t* job_copy(job_t* dst, job_t* src) {
 	if (src==NULL){
@@ -66,8 +63,6 @@ bool job_is_equal(job_t* j1, job_t* j2) {
 
 /*
  * TODO: you must implement this function.
- * Hint:
- * - read the information in job.h about padding and truncation of job labels
  */
 job_t* job_set(job_t* job, pid_t pid, unsigned int id, const char* label) {
 	if (job == NULL){
@@ -96,8 +91,6 @@ job_t* job_set(job_t* job, pid_t pid, unsigned int id, const char* label) {
 
 /* 
  * TODO: you must implement this function
- * Hint:
- * - look at the allocation of a job in job_new
  */
 void job_delete(job_t* job) {
 	free (job);
