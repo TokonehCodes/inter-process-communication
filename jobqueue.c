@@ -1,5 +1,4 @@
 /*
- * Replace the following string of 0s with your student number
  * 20030046
  */
 #include <stdlib.h>
@@ -45,14 +44,6 @@ size_t jobqueue_capacity(jobqueue_t* jq) {
 
 /* 
  * TODO: you must implement this function.
- * Hints
- * - read the documentation in jobqueue.h carefully. Pay particular attention
- *      to what the documentation says about NULL jq or dst parameters and
- *      copying jobs
- * - be careful to update the queue correctly before returning the pointer
- *      to the dequeued job
- * - note there are relevant job functions to help with the implementation of 
- *      this function 
  */
 job_t* jobqueue_dequeue(jobqueue_t* jq, job_t* dst) {
 	if(jq==NULL){
@@ -122,16 +113,6 @@ job_t* jobqueue_peekhead(jobqueue_t* jq, job_t* dst) {
 
 /* 
  * TODO: you must implement this function.
- *
- * Hints
- * - this is not quite as obvious as the peekhead function because the buffer
- *      tail index gives the position of the next available slot, not the slot
- *      for the job at the end of the queue
- * - remember the buffer wraps round and so the tail could be the position
- *      behind element 0 in the buffer etc
- * - even given the above, the index of the job at the tail is a function 
- *      of the current tail value and the buffer size (i.e. it can be 
- *      calculated from those values)
  */
 job_t* jobqueue_peektail(jobqueue_t* jq, job_t* dst) {
 	return jobqueue_is_empty(jq) ? NULL : job_copy(dst, &jq->jobs[(jq->buf_size + jq->tail -1)%jq->buf_size]);
