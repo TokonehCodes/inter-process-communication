@@ -1,5 +1,4 @@
 /*
- * Replace the following string of 0s with your student number
  * 200300469
  */
 #include <fcntl.h>          /* For O_* constants */
@@ -228,8 +227,6 @@ job_t* sem_jobqueue_peektail(sem_jobqueue_t* sjq, job_t* dst) {
 /* 
  * TODO: you must implement this function according to the specification in
  * sem_jobqueue.h
- * Hint:
- * - look at what is allocated and/or opened in sem_jobqueue_new
  */
 void sem_jobqueue_delete(sem_jobqueue_t* sjq) {
 	sem_delete(sjq->empty, sem_empty_label);
