@@ -1,5 +1,4 @@
 /*
- * Replace the following string of 0s with your student number
  * 200300469
  */
 #include <stdlib.h>
@@ -149,9 +148,6 @@ void init_segment(protocol_t* proto, seg_type type, bool payload_only) {
  * TODO: you must implement this function.
  *
  * See documentation in rft_client_util.h and the assignment specification
- *
- * Hint:
- *  - you have to detect an error when reading from the proto's input file
  */
 void read_data(protocol_t* proto) {
 	
@@ -177,13 +173,6 @@ void read_data(protocol_t* proto) {
  * See documentation in rft_client_util.h and the assignment specification
  * and see how to send data in the preliminary exercise.
  *
- * Hints:
- *  - you have to handle the case when the current retry count 
- *      exceeds the maximum number of retries allowed
- *  - you have to introduce a probability of corruption of the payload checksum
- *      if the tfr_mode is with timeout (wt)
- *  - you have to detect an error from sending data - see how the rft_server
- *      detects an error when sending an ACK
  */
 void send_data(protocol_t* proto) {
 	
@@ -340,10 +329,6 @@ void send_file_with_timeout(protocol_t* proto) {
  *
  * See documentation in rft_client_util.h and the assignment specification
  *
- * Hint:
- *  - you must copy proto information to a metadata struct
- *  - you have to detect an error from sending metadata - see how the rft_server
- *      detects an error when sending an ACK
  */
 bool send_metadata(protocol_t* proto) {
 	
@@ -396,9 +381,6 @@ void set_socket_timeout(protocol_t* proto) {
  * See documentation in rft_client_util.h and the assignment specification,
  * and look at rft_server and preliminary exercise code.
  *
- * Hint:
- *  - Make sure you check the return values of system calls such as 
- *      socket and inet_aton
  */
 void set_udp_socket(protocol_t* proto) {
 	
